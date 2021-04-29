@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>ahoge</title>
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 1);
+        }
+
+        #overlay {
+            font-family: 'Verdana', sans-serif;
+            font-size: 7em;
+            margin: .2em .5em;
+            color: rgba(255, 255, 255, 1);
+            position: fixed;
+            right: 0;
+            bottom: 0;
+        }
+
+        video#bgvid {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+            z-index: -100;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <video id="bgvid" autoplay muted loop>
+        <source src="https://www.dropbox.com/s/4495sar9ou0je12/intothelabyrinth.mp4?raw=1">
+    </video>
+    <button id="unmuteButton">unmute me!</button>
+    <script>
+        bgvid.volume = 0.25;
+            unmuteButton.addEventListener('click', function () {
+                bgvid.muted = false;
+                unmuteButton.style.display = 'none';
+            });
+    </script>
+    <div id="overlay">AMV by "Lolligerjoj"</div>
+</body>
+
+</html>
