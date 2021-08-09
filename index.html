@@ -1,47 +1,29 @@
 <html>
-
-<head>
-    <title>ahoge</title>
+  <head>
+    <title>ahoge.moe</title>
     <style>
-        body {
-            background-color: rgba(0, 0, 0, 1);
-        }
+      body {
+        background-color: rgba(0, 0, 0, 1);
+      }
 
-        #overlay {
-            font-family: 'Verdana', sans-serif;
-            font-size: 7em;
-            margin: .2em .5em;
-            color: rgba(255, 255, 255, 1);
-            position: fixed;
-            right: 0;
-            bottom: 0;
-        }
+      #overlay {
+        font-family: 'Verdana', sans-serif;
+        font-size: 7em;
+        margin: .2em .5em;
+        color: rgba(255, 255, 255, 1);
+        position: fixed;
+        right: 0;
+        bottom: 0;
+      }
 
-        video#bgvid {
-            position: fixed;
-            right: 0;
-            top: 0;
-            width: 100%;
-            height: auto;
-            z-index: -100;
-            background-size: cover;
-        }
+      #player {
+        width: 100%;
+        height: 100%;
+      }
     </style>
-</head>
-
-<body>
-    <video id="bgvid" autoplay muted loop>
-        <source src="https://www.dropbox.com/s/x921gwzm9rc2pc1/04941.BC2013.Lolligerjoj-Into.The.Labyrinth.1080p.amvnews.ru.mp4?raw=1">
-    </video>
-    <button id="unmuteButton">unmute me!</button>
-    <script>
-        bgvid.volume = 0.25;
-            unmuteButton.addEventListener('click', function () {
-                bgvid.muted = false;
-                unmuteButton.style.display = 'none';
-            });
-    </script>
+  </head>
+  <body>
+    <iframe id="player" src="http://www.youtube.com/embed/NZfFAPii2gE?autoplay=1&mute=1&fs=0&loop=1&modestbranding=1&rel=0" frameborder="0"></iframe>
     <div id="overlay">AMV by "Lolligerjoj"</div>
-</body>
-
+  </body>
 </html>
